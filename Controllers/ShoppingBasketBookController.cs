@@ -22,14 +22,6 @@ namespace WebServiceBookStore.Controllers
             return r.GetAll();
         }
 
-        // GET: api/ShoppingBasketBook/GetAll
-        [HttpGet("GetAll"), Authorize]
-        public IEnumerable<ShoppingBasketBook> GetAll()
-        {
-            ShoppingBasketBookRepository r = new ShoppingBasketBookRepository();
-            return r.GetAll();
-        }
-
         // GET: api/ShoppingBasketBook/5
         [HttpGet("{id}"), Authorize]
         public ShoppingBasketBook Get(int id)

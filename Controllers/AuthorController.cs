@@ -16,14 +16,7 @@ namespace WebServiceBookStore.Controllers
     {
         // GET: api/Author
         [HttpGet, Authorize]
-        public void Get()
-        {
-            GetAll();
-        }
-
-        // GET: api/Author/GetAll
-        [HttpGet("GetAll"), Authorize]
-        public IActionResult GetAll()
+        public IActionResult Get()
         {
             AuthorRepository r = new AuthorRepository();
             var authors =  r.GetAll();
