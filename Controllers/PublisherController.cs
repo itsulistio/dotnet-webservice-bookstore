@@ -6,6 +6,7 @@ using WebServiceBookStore.Repository;
 using WebServiceBookStore.Models;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Authorization;
 
 namespace WebServiceBookStore.Controllers
 {
@@ -14,7 +15,7 @@ namespace WebServiceBookStore.Controllers
     public class PublisherController : Controller
     {
         // GET: api/Publisher
-        [HttpGet]
+        [HttpGet, Authorize]
         public IEnumerable<Publisher> Get()
         {
             PublisherRepository r = new PublisherRepository();
@@ -22,7 +23,7 @@ namespace WebServiceBookStore.Controllers
         }
 
         // GET: api/Publisher/GetAll
-        [HttpGet("GetAll")]
+        [HttpGet("GetAll"), Authorize]
         public IEnumerable<Publisher> GetAll()
         {
             PublisherRepository r = new PublisherRepository();
@@ -30,7 +31,7 @@ namespace WebServiceBookStore.Controllers
         }
 
         // GET: api/Publisher/GetById/5
-        [HttpGet("GetById/{id}")]
+        [HttpGet("GetById/{id}"), Authorize]
         public Publisher Get(int id)
         {
             PublisherRepository r = new PublisherRepository();
@@ -38,7 +39,7 @@ namespace WebServiceBookStore.Controllers
         }
         
         // POST: api/Publisher/Insert
-        [HttpPost("Insert")]
+        [HttpPost("Insert"), Authorize]
         public void Post([FromBody]Publisher value)
         {
             PublisherRepository r = new PublisherRepository();
@@ -46,7 +47,7 @@ namespace WebServiceBookStore.Controllers
         }
 
         // PUT: api/Publisher/Update
-        [HttpPut("Update")]
+        [HttpPut("Update"), Authorize]
         public void Put([FromBody]Publisher value)
         {
             PublisherRepository r = new PublisherRepository();
@@ -54,7 +55,7 @@ namespace WebServiceBookStore.Controllers
         }
 
         // DELETE: api/Publisher/Delete/5
-        [HttpDelete("Delete/{id}")]
+        [HttpDelete("Delete/{id}"), Authorize]
         public void Delete(int id)
         {
             PublisherRepository r = new PublisherRepository();

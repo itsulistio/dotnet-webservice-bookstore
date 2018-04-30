@@ -1,10 +1,4 @@
-﻿using Dapper;
-using MySql.Data.MySqlClient;
-using System;
-using System.Data;
-using System.Linq;
-
-namespace WebServiceBookStore.Models
+﻿namespace WebServiceBookStore.Models
 {
     public class Publisher
     {

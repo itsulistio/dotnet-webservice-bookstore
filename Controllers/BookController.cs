@@ -6,6 +6,7 @@ using WebServiceBookStore.Repository;
 using WebServiceBookStore.Models;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Authorization;
 
 namespace WebServiceBookStore.Controllers
 {
@@ -14,7 +15,7 @@ namespace WebServiceBookStore.Controllers
     public class BookController : Controller
     {
         // GET: api/Book
-        [HttpGet]
+        [HttpGet, Authorize]
         public IEnumerable<Book> Get()
         {
             BookRepository r = new BookRepository();
@@ -22,7 +23,7 @@ namespace WebServiceBookStore.Controllers
         }
 
         // GET: api/Book/GetAll
-        [HttpGet("GetAll")]
+        [HttpGet("GetAll"), Authorize]
         public IEnumerable<Book> GetAll()
         {
             BookRepository r = new BookRepository();
@@ -30,7 +31,7 @@ namespace WebServiceBookStore.Controllers
         }
 
         // GET: api/Book/GetById/5
-        [HttpGet("GetById/{id}")]
+        [HttpGet("GetById/{id}"), Authorize]
         public Book Get(int id)
         {
             BookRepository r = new BookRepository();
@@ -38,7 +39,7 @@ namespace WebServiceBookStore.Controllers
         }
         
         // POST: api/Book/Insert
-        [HttpPost("Insert")]
+        [HttpPost("Insert"), Authorize]
         public void Post([FromBody]Book value)
         {
             BookRepository r = new BookRepository();
@@ -46,7 +47,7 @@ namespace WebServiceBookStore.Controllers
         }
 
         // PUT: api/Book/Update
-        [HttpPut("Update")]
+        [HttpPut("Update"), Authorize]
         public void Put([FromBody]Book value)
         {
             BookRepository r = new BookRepository();
@@ -54,7 +55,7 @@ namespace WebServiceBookStore.Controllers
         }
 
         // DELETE: api/Book/Delete/5
-        [HttpDelete("Delete/{id}")]
+        [HttpDelete("Delete/{id}"), Authorize]
         public void Delete(int id)
         {
             BookRepository r = new BookRepository();

@@ -35,6 +35,18 @@ namespace WebServiceBookStore.Repository
             }
         }
 
+        public Customer GetByEmail(string email)
+        {
+            try
+            {
+                return connection.Query<Customer>("SELECT * FROM customer WHERE Email = @email", new { email }).SingleOrDefault();
+            }
+            catch (Exception)
+            {
+                return null;
+            }
+        }
+
         public void Insert(Customer Customer)
         {
             string query = "INSERT INTO customer VALUES(null, '" + Customer.Email + "', '" + Customer.Name + "', '" + Customer.Phone +  "', '" + Customer.Address + "')";

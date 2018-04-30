@@ -6,6 +6,7 @@ using WebServiceBookStore.Repository;
 using WebServiceBookStore.Models;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Authorization;
 
 namespace WebServiceBookStore.Controllers
 {
@@ -14,7 +15,7 @@ namespace WebServiceBookStore.Controllers
     public class CustomerController : Controller
     {
         // GET: api/Customer
-        [HttpGet]
+        [HttpGet, Authorize]
         public IEnumerable<Customer> Get()
         {
             CustomerRepository r = new CustomerRepository();
@@ -22,7 +23,7 @@ namespace WebServiceBookStore.Controllers
         }
 
         // GET: api/Customer/GetAll
-        [HttpGet("GetAll")]
+        [HttpGet("GetAll"), Authorize]
         public IEnumerable<Customer> GetAll()
         {
             CustomerRepository r = new CustomerRepository();
@@ -30,7 +31,7 @@ namespace WebServiceBookStore.Controllers
         }
 
         // GET: api/Customer/GetById/5
-        [HttpGet("GetById/{id}")]
+        [HttpGet("GetById/{id}"), Authorize]
         public Customer Get(int id)
         {
             CustomerRepository r = new CustomerRepository();
@@ -38,7 +39,7 @@ namespace WebServiceBookStore.Controllers
         }
         
         // POST: api/Customer/Insert
-        [HttpPost("Insert")]
+        [HttpPost("Insert"), Authorize]
         public void Post([FromBody]Customer value)
         {
             CustomerRepository r = new CustomerRepository();
@@ -46,7 +47,7 @@ namespace WebServiceBookStore.Controllers
         }
 
         // PUT: api/Customer/Update
-        [HttpPut("Update")]
+        [HttpPut("Update"), Authorize]
         public void Put([FromBody]Customer value)
         {
             CustomerRepository r = new CustomerRepository();
@@ -54,7 +55,7 @@ namespace WebServiceBookStore.Controllers
         }
 
         // DELETE: api/Customer/Delete/5
-        [HttpDelete("Delete/{id}")]
+        [HttpDelete("Delete/{id}"), Authorize]
         public void Delete(int id)
         {
             CustomerRepository r = new CustomerRepository();

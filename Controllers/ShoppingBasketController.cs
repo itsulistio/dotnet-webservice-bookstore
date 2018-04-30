@@ -6,6 +6,7 @@ using WebServiceBookStore.Repository;
 using WebServiceBookStore.Models;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Authorization;
 
 namespace WebServiceBookStore.Controllers
 {
@@ -14,7 +15,7 @@ namespace WebServiceBookStore.Controllers
     public class ShoppingBasketController : Controller
     {
         // GET: api/ShoppingBasket
-        [HttpGet]
+        [HttpGet, Authorize]
         public IEnumerable<ShoppingBasket> Get()
         {
             ShoppingBasketRepository r = new ShoppingBasketRepository();
@@ -22,7 +23,7 @@ namespace WebServiceBookStore.Controllers
         }
 
         // GET: api/ShoppingBasket/GetAll
-        [HttpGet("GetAll")]
+        [HttpGet("GetAll"), Authorize]
         public IEnumerable<ShoppingBasket> GetAll()
         {
             ShoppingBasketRepository r = new ShoppingBasketRepository();
@@ -30,7 +31,7 @@ namespace WebServiceBookStore.Controllers
         }
 
         // GET: api/ShoppingBasket/GetById/5
-        [HttpGet("GetById/{id}")]
+        [HttpGet("GetById/{id}"), Authorize]
         public ShoppingBasket Get(int id)
         {
             ShoppingBasketRepository r = new ShoppingBasketRepository();
@@ -38,7 +39,7 @@ namespace WebServiceBookStore.Controllers
         }
         
         // POST: api/ShoppingBasket/Insert
-        [HttpPost("Insert")]
+        [HttpPost("Insert"), Authorize]
         public void Post([FromBody]ShoppingBasket value)
         {
             ShoppingBasketRepository r = new ShoppingBasketRepository();
@@ -46,7 +47,7 @@ namespace WebServiceBookStore.Controllers
         }
 
         // PUT: api/ShoppingBasket/Update
-        [HttpPut("Update")]
+        [HttpPut("Update"), Authorize]
         public void Put([FromBody]ShoppingBasket value)
         {
             ShoppingBasketRepository r = new ShoppingBasketRepository();
@@ -54,7 +55,7 @@ namespace WebServiceBookStore.Controllers
         }
 
         // DELETE: api/ShoppingBasket/Delete/5
-        [HttpDelete("Delete/{id}")]
+        [HttpDelete("Delete/{id}"), Authorize]
         public void Delete(int id)
         {
             ShoppingBasketRepository r = new ShoppingBasketRepository();
