@@ -30,8 +30,8 @@ namespace WebServiceBookStore.Controllers
             return r.GetAll();
         }
 
-        // GET: api/ShoppingBasket/GetById/5
-        [HttpGet("GetById/{id}"), Authorize]
+        // GET: api/ShoppingBasket/5
+        [HttpGet("{id}"), Authorize]
         public ShoppingBasket Get(int id)
         {
             ShoppingBasketRepository r = new ShoppingBasketRepository();

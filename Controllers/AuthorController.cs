@@ -16,26 +16,41 @@ namespace WebServiceBookStore.Controllers
     {
         // GET: api/Author
         [HttpGet, Authorize]
-        public IEnumerable<Author> Get()
+        public void Get()
         {
-            AuthorRepository r = new AuthorRepository();
-            return r.GetAll();
+            GetAll();
         }
 
         // GET: api/Author/GetAll
         [HttpGet("GetAll"), Authorize]
-        public IEnumerable<Author> GetAll()
+        public IActionResult GetAll()
         {
             AuthorRepository r = new AuthorRepository();
-            return r.GetAll();
+            var authors =  r.GetAll();
+            if (authors == null)
+            {
+                return NotFound();
+            }
+            else
+            {
+                return Ok(authors);
+            }
         }
 
-        // GET: api/Author/GetById/5
-        [HttpGet("GetById/{id}"), Authorize]
-        public Author Get(int id)
+        // GET: api/Author/5
+        [HttpGet("{id}"), Authorize]
+        public IActionResult Get(int id)
         {
             AuthorRepository r = new AuthorRepository();
-            return r.GetById(id);
+            var author =  r.GetById(id);
+            if (author == null)
+            {
+                return NotFound();
+            }
+            else
+            {
+                return Ok(author);
+            }
         }
         
         // POST: api/Author/Insert

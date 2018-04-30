@@ -43,7 +43,7 @@ namespace WebServiceBookStore.Repository
 
         public void Update(Book Book)
         {
-            string query = "UPDATE book SET ISBN = '" + Book.ISBN + "', Id_Publisher = " + Book.Id_Publisher + ", Id_Author = " + Book.Id_Author + ", Year = " + Book.Year + ", Title = '" + Book.Title + "', Price = " + Book.Price + " WHERE Id_Book = " + Book.Id_Book + ")";
+            string query = "UPDATE book SET ISBN = '" + Book.ISBN + "', Id_Publisher = " + Book.Id_Publisher + ", Id_Author = " + Book.Id_Author + ", Year = " + Book.Year + ", Title = '" + Book.Title + "', Price = " + Book.Price + " WHERE Id_Book = " + Book.Id_Book;
             connection.Execute(query);
         }
 

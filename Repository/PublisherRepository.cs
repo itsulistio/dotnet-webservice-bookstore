@@ -43,7 +43,7 @@ namespace WebServiceBookStore.Repository
 
         public void Update(Publisher Publisher)
         {
-            string query = "UPDATE publisher SET Name = '" + Publisher.Name + "', Address = '" + Publisher.Address + "', Phone = '" + Publisher.Phone + "', URL = '" + Publisher.URL + "' WHERE Id_Publisher = " + Publisher.Id_Publisher + ")";
+            string query = "UPDATE publisher SET Name = '" + Publisher.Name + "', Address = '" + Publisher.Address + "', Phone = '" + Publisher.Phone + "', URL = '" + Publisher.URL + "' WHERE Id_Publisher = " + Publisher.Id_Publisher;
             connection.Execute(query);
         }
 

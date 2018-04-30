@@ -43,7 +43,7 @@ namespace WebServiceBookStore.Repository
 
         public void Update(Login Login)
         {
-            string query = "UPDATE login SET Password = '" + Login.Password + "' WHERE Email = " + Login.Email + ")";
+            string query = "UPDATE login SET Password = '" + Login.Password + "' WHERE Email = " + Login.Email;
             connection.Execute(query);
         }
 

@@ -30,8 +30,8 @@ namespace WebServiceBookStore.Controllers
             return r.GetAll();
         }
 
-        // GET: api/Customer/GetById/5
-        [HttpGet("GetById/{id}"), Authorize]
+        // GET: api/Customer/5
+        [HttpGet("{id}"), Authorize]
         public Customer Get(int id)
         {
             CustomerRepository r = new CustomerRepository();

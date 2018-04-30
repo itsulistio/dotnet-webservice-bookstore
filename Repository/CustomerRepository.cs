@@ -55,7 +55,7 @@ namespace WebServiceBookStore.Repository
 
         public void Update(Customer Customer)
         {
-            string query = "UPDATE customer SET Email = '" + Customer.Email + "', Name = '" + Customer.Name + "', Phone = '" + Customer.Phone + "', Address = '" + Customer.Address + "' WHERE Id_Customer = " + Customer.Id_Customer + ")";
+            string query = "UPDATE customer SET Email = '" + Customer.Email + "', Name = '" + Customer.Name + "', Phone = '" + Customer.Phone + "', Address = '" + Customer.Address + "' WHERE Id_Customer = " + Customer.Id_Customer;
             connection.Execute(query);
         }
 

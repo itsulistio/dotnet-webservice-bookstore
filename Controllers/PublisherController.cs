@@ -30,8 +30,8 @@ namespace WebServiceBookStore.Controllers
             return r.GetAll();
         }
 
-        // GET: api/Publisher/GetById/5
-        [HttpGet("GetById/{id}"), Authorize]
+        // GET: api/Publisher/5
+        [HttpGet("{id}"), Authorize]
         public Publisher Get(int id)
         {
             PublisherRepository r = new PublisherRepository();
