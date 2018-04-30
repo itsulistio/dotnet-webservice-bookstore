@@ -1,0 +1,20 @@
+/home/nrfaikar/Documents/Kuliah @UPI/Pemrograman Visual/Tugas/(Tugas Besar) Web Service/bin/Debug/netcoreapp2.0/WebServiceBookStore.deps.json
+/home/nrfaikar/Documents/Kuliah @UPI/Pemrograman Visual/Tugas/(Tugas Besar) Web Service/bin/Debug/netcoreapp2.0/WebServiceBookStore.runtimeconfig.json
+/home/nrfaikar/Documents/Kuliah @UPI/Pemrograman Visual/Tugas/(Tugas Besar) Web Service/bin/Debug/netcoreapp2.0/WebServiceBookStore.runtimeconfig.dev.json
+/home/nrfaikar/Documents/Kuliah @UPI/Pemrograman Visual/Tugas/(Tugas Besar) Web Service/bin/Debug/netcoreapp2.0/WebServiceBookStore.dll
+/home/nrfaikar/Documents/Kuliah @UPI/Pemrograman Visual/Tugas/(Tugas Besar) Web Service/bin/Debug/netcoreapp2.0/WebServiceBookStore.pdb
+/home/nrfaikar/Documents/Kuliah @UPI/Pemrograman Visual/Tugas/(Tugas Besar) Web Service/obj/Debug/netcoreapp2.0/WebServiceBookStore.csproj.CoreCompileInputs.cache
+/home/nrfaikar/Documents/Kuliah @UPI/Pemrograman Visual/Tugas/(Tugas Besar) Web Service/obj/Debug/netcoreapp2.0/WebServiceBookStore.AssemblyInfoInputs.cache
+/home/nrfaikar/Documents/Kuliah @UPI/Pemrograman Visual/Tugas/(Tugas Besar) Web Service/obj/Debug/netcoreapp2.0/WebServiceBookStore.AssemblyInfo.cs
+/home/nrfaikar/Documents/Kuliah @UPI/Pemrograman Visual/Tugas/(Tugas Besar) Web Service/obj/Debug/netcoreapp2.0/WebServiceBookStore.dll
+/home/nrfaikar/Documents/Kuliah @UPI/Pemrograman Visual/Tugas/(Tugas Besar) Web Service/obj/Debug/netcoreapp2.0/WebServiceBookStore.pdb
+/home/nrfaikar/Documents/Kuliah @UPI/Pemrograman Visual/Tugas/WebServiceBookStore/bin/Debug/netcoreapp2.0/WebServiceBookStore.deps.json
+/home/nrfaikar/Documents/Kuliah @UPI/Pemrograman Visual/Tugas/WebServiceBookStore/bin/Debug/netcoreapp2.0/WebServiceBookStore.runtimeconfig.json
+/home/nrfaikar/Documents/Kuliah @UPI/Pemrograman Visual/Tugas/WebServiceBookStore/bin/Debug/netcoreapp2.0/WebServiceBookStore.runtimeconfig.dev.json
+/home/nrfaikar/Documents/Kuliah @UPI/Pemrograman Visual/Tugas/WebServiceBookStore/bin/Debug/netcoreapp2.0/WebServiceBookStore.dll
+/home/nrfaikar/Documents/Kuliah @UPI/Pemrograman Visual/Tugas/WebServiceBookStore/bin/Debug/netcoreapp2.0/WebServiceBookStore.pdb
+/home/nrfaikar/Documents/Kuliah @UPI/Pemrograman Visual/Tugas/WebServiceBookStore/obj/Debug/netcoreapp2.0/WebServiceBookStore.csproj.CoreCompileInputs.cache
+/home/nrfaikar/Documents/Kuliah @UPI/Pemrograman Visual/Tugas/WebServiceBookStore/obj/Debug/netcoreapp2.0/WebServiceBookStore.AssemblyInfoInputs.cache
+/home/nrfaikar/Documents/Kuliah @UPI/Pemrograman Visual/Tugas/WebServiceBookStore/obj/Debug/netcoreapp2.0/WebServiceBookStore.AssemblyInfo.cs
+/home/nrfaikar/Documents/Kuliah @UPI/Pemrograman Visual/Tugas/WebServiceBookStore/obj/Debug/netcoreapp2.0/WebServiceBookStore.dll
+/home/nrfaikar/Documents/Kuliah @UPI/Pemrograman Visual/Tugas/WebServiceBookStore/obj/Debug/netcoreapp2.0/WebServiceBookStore.pdb
