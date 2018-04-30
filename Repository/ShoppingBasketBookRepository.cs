@@ -41,16 +41,32 @@ namespace WebServiceBookStore.Repository
             connection.Execute(query);
         }
 
-        public void Update(ShoppingBasketBook ShoppingBasketBook)
+        public bool Update(ShoppingBasketBook ShoppingBasketBook)
         {
             string query = "UPDATE shoppingbasketbook SET Id_ShoppingBasket = "+ ShoppingBasketBook.Id_ShoppingBasket + ", Id_Book = " + ShoppingBasketBook.Id_Book + ", Count = " + ShoppingBasketBook.Count + " WHERE Id_ShoppingBasketBook = " + ShoppingBasketBook.Id_ShoppingBasketBook;
-            connection.Execute(query);
+            
+            if (connection.Execute(query) > 0)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
         }
 
-        public void Delete(int id)
+        public bool Delete(int id)
         {
             string query = "DELETE FROM shoppingbasketbook WHERE Id_ShoppingBasketBook = @id";
-            connection.Execute(query, new { id });
+            
+            if (connection.Execute(query, new { id }) > 0)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
         }
     }
 }

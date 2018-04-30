@@ -53,16 +53,32 @@ namespace WebServiceBookStore.Repository
             connection.Execute(query);
         }
 
-        public void Update(Customer Customer)
+        public bool Update(Customer Customer)
         {
             string query = "UPDATE customer SET Email = '" + Customer.Email + "', Name = '" + Customer.Name + "', Phone = '" + Customer.Phone + "', Address = '" + Customer.Address + "' WHERE Id_Customer = " + Customer.Id_Customer;
-            connection.Execute(query);
+            
+            if (connection.Execute(query) > 0)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
         }
 
-        public void Delete(int id)
+        public bool Delete(int id)
         {
             string query = "DELETE FROM customer WHERE Id_Customer = @id";
-            connection.Execute(query, new { id });
+            
+            if (connection.Execute(query, new { id }) > 0)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
         }
     }
 }

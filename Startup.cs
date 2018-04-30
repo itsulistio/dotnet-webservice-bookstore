@@ -53,6 +53,8 @@ namespace WebServiceBookStore
 
             app.UseAuthentication();
 
+            app.UseStatusCodePages();
+
             app.UseMvc();
         }
     }

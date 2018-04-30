@@ -20,9 +20,15 @@ namespace WebServiceBookStore.Controllers
         {
             AuthorRepository r = new AuthorRepository();
             var authors =  r.GetAll();
+
             if (authors == null)
             {
-                return NotFound();
+                var response = new ContentResult()
+                {
+                    StatusCode = StatusCodes.Status204NoContent,
+                    Content = "No authors data"
+                };
+                return response;
             }
             else
             {
@@ -36,9 +42,15 @@ namespace WebServiceBookStore.Controllers
         {
             AuthorRepository r = new AuthorRepository();
             var author =  r.GetById(id);
+
             if (author == null)
             {
-                return NotFound();
+                var response = new ContentResult()
+                {
+                    StatusCode = StatusCodes.Status204NoContent,
+                    Content = "No author data for id = " + id
+                };
+                return response;
             }
             else
             {
@@ -48,26 +60,54 @@ namespace WebServiceBookStore.Controllers
         
         // POST: api/Author/Insert
         [HttpPost("Insert"), Authorize]
-        public void Post([FromBody]Author value)
+        public IActionResult Post([FromBody]Author value)
         {
             AuthorRepository r = new AuthorRepository();
             r.Insert(value);
+
+            return Ok("Author data entry successful");
         }
 
         // PUT: api/Author/Update
         [HttpPut("Update"), Authorize]
-        public void Put([FromBody]Author value)
+        public IActionResult Put([FromBody]Author value)
         {
             AuthorRepository r = new AuthorRepository();
-            r.Update(value);
+            
+            if (r.Update(value))
+            {
+                return Ok("Author data successfully changed");
+            }
+            else
+            {
+                var response = new ContentResult()
+                {
+                    StatusCode = StatusCodes.Status409Conflict,
+                    Content = "Updating failed... No author data for id = " + value.Id_Author
+                };
+                return response;
+            }
         }
 
         // DELETE: api/Author/Delete/5
         [HttpDelete("Delete/{id}"), Authorize]
-        public void Delete(int id)
+        public IActionResult Delete(int id)
         {
             AuthorRepository r = new AuthorRepository();
-            r.Delete(id);
+            
+            if (r.Delete(id))
+            {
+                return Ok("Author data successfully removed");
+            }
+            else
+            {
+                var response = new ContentResult()
+                {
+                    StatusCode = StatusCodes.Status409Conflict,
+                    Content = "Removing failed... No author data for id = " + id
+                };
+                return response;
+            }
         }
     }
 }

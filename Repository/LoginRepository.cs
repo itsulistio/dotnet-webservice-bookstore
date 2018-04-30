@@ -41,16 +41,32 @@ namespace WebServiceBookStore.Repository
             connection.Execute(query);
         }
 
-        public void Update(Login Login)
+        public bool Update(Login Login)
         {
             string query = "UPDATE login SET Password = '" + Login.Password + "' WHERE Email = " + Login.Email;
-            connection.Execute(query);
+            
+            if (connection.Execute(query) > 0)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
         }
 
-        public void Delete(string email)
+        public bool Delete(string email)
         {
             string query = "DELETE FROM login WHERE Email = @email";
-            connection.Execute(query, new { email });
+            
+            if (connection.Execute(query, new { email }) > 0)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
         }
     }
 }
