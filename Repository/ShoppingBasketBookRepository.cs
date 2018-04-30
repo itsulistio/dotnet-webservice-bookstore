@@ -3,8 +3,9 @@ using MySql.Data.MySqlClient;
 using System;
 using System.Data;
 using System.Linq;
+using WebServiceBookStore.Models;
 
-namespace WebServiceBookStore.Models
+namespace WebServiceBookStore.Repository
 {
     public class ShoppingBasketBookRepository
     {
